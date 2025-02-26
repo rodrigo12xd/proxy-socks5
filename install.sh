@@ -9,7 +9,8 @@ echo "Instalando dante server..."
 apt install dante-server -y >/dev/null 2>&1
 cd /etc
 rm danted.conf >/dev/null 2>&1
-wget -O danted.conf https://raw.githubusercontent.com/rodrigo12xd/proxy-socks5/refs/heads/master/danted.conf && chmod 777 danted.conf >/dev/null 2>&1
+wget -O danted.conf https://raw.githubusercontent.com/rodrigo12xd/proxy-socks5/refs/heads/master/danted.conf >/dev/null 2>&1
+chmod 777 danted.conf >/dev/null 2>&1
 cd /root
 systemctl restart danted >/dev/null 2>&1
 echo "Criando usuario $USUARIO:$SENHA"
